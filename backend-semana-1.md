@@ -19,7 +19,7 @@ En este caso, la estrategia más sencilla sería la ilustrada en la diapositiva 
 List<User> findUsers(String firstName, String lastName)
 ```
 
-El incluir `?1 IS NULL`en cada condición provoca que la condición sea verdadera si el valor del parámetro correspondiente es `null`, conceptualmente "eliminando" la condición del WHERE.
+El incluir `?1 IS NULL OR`en cada condición provoca que la condición sea verdadera si el valor del parámetro correspondiente es `null`, conceptualmente "eliminando" la condición del WHERE.
 
 ## Tarea 3: definir las interfaces de la capa Lógica de Negocio
 
