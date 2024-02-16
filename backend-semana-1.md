@@ -15,11 +15,11 @@ Un caso interesante ocurre en el caso de uso de búsqueda de pruebas deportivas 
 En este caso, la estrategia más sencilla sería la ilustrada en la diapositiva 54 (`@Query`), empleando un pequeño truco para incluir condicionalmente cada parámetro de búsqueda en la consulta. Por ejemplo, supongamos que queremos implementar un caso de uso de búsqueda de usuarios mediante un formulario con dos campos: nombre y apellidos. Ambos campos son opcionales. Cuantos más campos rellene el usuario de la aplicación, más selectiva será la búsqueda (e.g. si rellenan los dos campos, se recuperarán los usuarios que tengan ese nombre y apellidos; si sólo se rellena el campo del nombre, se recuperarán los usuarios que tienen ese nombre; si no se rellena ningún campo, se recuperarán todos los usuarios; etc.). Para este fin, el DAO de los usuarios podría proporcionar el siguiente método de búsqueda (por sencillez, no usa paginación):
 
 ```java
-@Query("SELECT u FROM User u WHERE (?1 IS NULL OR u.userName = ?1) AND (?1 IS NULL OR u.lastName = ?2) ORDER BY lastName")
+@Query("SELECT u FROM User u WHERE (?1 IS NULL OR u.userName = ?1) AND (?2 IS NULL OR u.lastName = ?2) ORDER BY lastName")
 List<User> findUsers(String firstName, String lastName)
 ```
 
-El incluir `?1 IS NULL OR`en cada condición provoca que la condición sea verdadera si el valor del parámetro correspondiente es `null`, conceptualmente "eliminando" la condición del WHERE.
+El incluir `?x IS NULL OR` en cada condición (siendo `x` el número de parámetro) provoca que la condición sea verdadera si el valor del parámetro correspondiente es `null`, conceptualmente "eliminando" la condición del WHERE.
 
 ## Tarea 3: definir las interfaces de la capa Lógica de Negocio
 
