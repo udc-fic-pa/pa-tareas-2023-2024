@@ -37,7 +37,7 @@ Recordad, además, añadir las reglas de control de acceso propias de vuestra pr
 
 ## Parámetros LocalDate en métodos de controladores
 
-Para invocar el caso de uso de búsqueda de pruebas deportivas del backend, será necesario hacer una petición del estilo `GET /eventsearch/events?provinceId=1&eventTypeId=2&startDate=2024-05-01&endDate?2024-05-15`. Para hacer que el método del controlador que procesa esta petición pueda recibir las fechas en los parámetros correspondientes, podéis proceder de la siguiente manera: 
+Para invocar el caso de uso de búsqueda de pruebas deportivas del backend, será necesario hacer una petición del estilo `GET /eventsearch/events?provinceId=1&eventTypeId=2&startDate=2024-05-01&endDate=2024-05-15`. Para hacer que el método del controlador que procesa esta petición pueda recibir las fechas en los parámetros correspondientes, podéis proceder de la siguiente manera: 
 
 ```java
 @RestController
