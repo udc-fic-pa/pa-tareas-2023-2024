@@ -16,7 +16,7 @@ En las peticiones que requieran el token JWT, hay que añadir la cabecera `Autho
 
 ![Autenticación](find-order-request.png)
 
-Por último, recordad que los tokens JWT emitidos por el backend de vuestra práctica (y de pa-shop) tienen un tiempo de vida de 1 día. Debéis actualizar el valor de la cabecera `Authorization` en las peticiones que la usen cuando se necesario.
+Por último, recordad que los tokens JWT emitidos por el backend de vuestra práctica (y de pa-shop) tienen un tiempo de vida de 1 día. Debéis actualizar el valor de la cabecera `Authorization` en las peticiones que la usen cuando sea necesario.
 
 ## Control de acceso
 
