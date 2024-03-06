@@ -4,6 +4,20 @@ Para completar el backend ya sólo os queda implementar la capa de Servicios RES
 
 A continuación se comentan algunos aspectos concretos a tener en cuenta.
 
+## Cómo pasar la cabecera Authorization con Postman
+
+Como aprendimos al final del tema 4, para las peticiones que requieran conocer la identidad del usuario, es necesario pasar la cabecera `Authorization` con el token JWT usando el esquema `Bearer`.
+
+Tras invocar al caso de uso de autenticación, se obtiene el token:
+
+![Autenticación](login-request.png)
+
+En las peticiones que requieran el token JWT, hay que añadir la cabecera `Authorization` (pestaña "Headers"):
+
+![Autenticación](find-order-request.png)
+
+Por último, recordad que los tokens JWT emitidos por el backend de vuestra práctica (y de pa-shop) tienen una tiempo de vida de 1 día. Debéis actualizar el valor de la cabecera `Authorization` en las peticiones que la usen cuando se necesario.
+
 ## Control de acceso
 
 Un aspecto a tener en cuenta es que tanto participantes como empleados deben poder editar la información de perfil y cambiar la contraseña. Para permitirlo, debéis cambiar ligeramente la configuración de base del control de acceso que figura en la clase `SecurityConfig`. Por ejemplo, asumiendo que hayáis modificado `User.RoleType` para que tenga los valores `PARTICIPANT` y `EMPLOYEE` (en lugar de `USER`), podéis hacer el siguiente cambio en `SecurityConfig`:
