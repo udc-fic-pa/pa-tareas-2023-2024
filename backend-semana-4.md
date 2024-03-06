@@ -14,7 +14,7 @@ Tras invocar al caso de uso de autenticación, se obtiene el token:
 
 En las peticiones que requieran el token JWT, hay que añadir la cabecera `Authorization` (pestaña "Headers"):
 
-![Autenticación](find-order-request.png)
+![Buscar pedido](find-order-request.png)
 
 Por último, recordad que los tokens JWT emitidos por el backend de vuestra práctica (y de pa-shop) tienen un tiempo de vida de 1 día. Debéis actualizar el valor de la cabecera `Authorization` en las peticiones que la usen cuando sea necesario.
 
