@@ -4,7 +4,7 @@ Después de las clases de esta semana, habéis adquirido los conocimientos neces
 
 A continuación, destacamos algunos aspectos relevantes:
 
-- En la búsqueda, para los campos correspondientes a las fechas de inicio y fin se aconseja usar `<input type="date">` (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date):
+- En el componente que genera el formulario de búsqueda se aconseja usar `<input type="date">` (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) para los campos correspondientes a las fechas de inicio y fin:
 
 ```js
 ...
