@@ -18,8 +18,8 @@ const [endDate, setEndDate] = useState('');
 ...
 ```
 
-Lo valores de las fechas (`string`) estarán automáticamente en formato ISO (`yyyy-mm-dd`).
+Los valores de las fechas (`string`) estarán automáticamente en formato ISO (`yyyy-mm-dd`).
 
-- Para cada prueba deportiva que concuerde con la búsqueda, el backend devuelve (entre otros cosas) el identificador del tipo de prueba y el identificador de la provincia en la que se celebra. Dado que el frontend debe mostrar para cada prueba su tipo y el nombre de la provincia en la que se celebra, el frontend debe cachear la lista de tipos de pruebas deportivas y provincias, y a partir de esa información cacheada, obtener el nombre del tipo de prueba y de la provincia. En la búsqueda de productos de pa-shop se procede de la misma manera con respecto a las categorías de los productos (apartado 7.2). En este, sentido:
+- Para cada prueba deportiva que concuerde con la búsqueda, el backend devuelve (entre otras cosas) el identificador del tipo de prueba y el identificador de la provincia en la que se celebra. Dado que el frontend debe mostrar para cada prueba su tipo y el nombre de la provincia en la que se celebra, el frontend debe cachear la lista de tipos de pruebas deportivas y provincias, y a partir de esa información cacheada, obtener el nombre del tipo de prueba y de la provincia. En la búsqueda de productos de pa-shop se procede de la misma manera con respecto a las categorías de los productos (apartado 7.2). En este, sentido:
   - `App.jsx`debe recuperar la lista de tipos de pruebas y provincias del backend, de forma similar a cómo lo hace pa-shop con la lista de categorías.
   - La lista de tipos de pruebas y provincias se debe cachear en el estado de Redux, de forma similar a cómo lo hace pa-shop con la lista de categorías.
