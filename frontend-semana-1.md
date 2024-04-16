@@ -4,6 +4,8 @@ Después de las clases de esta semana, habéis adquirido los conocimientos neces
 
 A continuación, destacamos algunos aspectos relevantes:
 
+- Es importante observar que en el enunciado se dice que el formulario de búsqueda de pruebas deportivas debe situarse en la pantalla principal de la aplicación (`Home`), a diferencia de pa-shop, donde el formulario de búsqueda de productos se ubica en la cabecera (`Header`). Por este motivo, el componente `Home` de vuestra práctica debe contener tanto el componente que contiene el formulario de búsqueda, e.g. `FindSportingEvents`, como el componente que muestra los resultados de la búsqueda, e.g. `FindSportingEventsResult`. La implementación de ambos componentes es similar a la de `FindProducts` y `FindProductsResult` en pa-shop. Si embargo, `FindSportingEvents`, a diferencia de `FindProducts`, no debe provocar un cambio de pantalla cuando el usuario hace clic en el botón de "buscar" (la aplicación seguirá mostrando la pantalla `Home`).
+
 - En el componente que genera el formulario de búsqueda se aconseja usar `<input type="date">` (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) para los campos correspondientes a las fechas de inicio y fin:
 
   ```js
