@@ -9,7 +9,7 @@ Para terminar la implementación del frontend ya sólo os quedan por completar l
 
 Algunos aspectos adicionales a tener en cuenta:
   - En la pantalla de visualización de inscripciones, si una inscripción no es puntuable, no se mostrará el enlace/botón para puntuarla.
-  - El formulario de puntuación se muestra en otra pantalla (a la que se accede desde la página con el histórico de las inscripciones a través del enlace/botón para puntuar cada inscripción).
+  - El formulario de puntuación se muestra en otra pantalla, a la que se accede desde la pantalla del histórico de inscripciones a través del enlace/botón para puntuar cada inscripción.
   - El formulario de puntuación debe mostrar el nombre de la prueba deportiva.
 
 
