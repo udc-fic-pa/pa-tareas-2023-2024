@@ -8,8 +8,22 @@ Para terminar la implementación del frontend ya sólo os quedan por completar l
 
 
 Algunos aspectos adicionales a tener en cuenta:
-  - En la pantalla de visualización de inscripciones, si una inscripción no es puntuable, no se mostrará el enlace/botón para puntuarla.
-  - El formulario de puntuación se muestra en otra pantalla, a la que se accede desde la pantalla del histórico de inscripciones a través del enlace/botón para puntuar cada inscripción.
-  - El formulario de puntuación debe mostrar el nombre de la prueba deportiva.
+- Tal y como se comenta en el enunciado de la práctica, en la pantalla de visualización del histórico de inscripciones, en cada inscripción se mostrará un enlace o un botón para poder puntuar la prueba asociada si se cumplen las condiciones necesarias. La opción del botón os resultará más sencilla. A continuación os mostramos una forma de hacerlo. La implementación de `onClick`, entre otras cosas, tiene que provocar una navegación (hook `useNavigate`) a la pantalla que muestra el formulario de puntuación.
+
+  ```js
+  <td>
+      {registration.ratingEnabled ?
+          <button className="btn btn-primary" onClick={() => {
+              ...
+          }}> 
+              <FormattedMessage id="...rate"/>
+          </button>
+          :
+          <FormattedMessage id="...rated"/>
+      }
+  </td>
+  ```
+
+- La pantalla de puntuación debe mostrar el nombre de la prueba deportiva. ¿Hay que dejar algo en el estado de Redux antes de navegar a la pantalla de puntuación?
 
 
