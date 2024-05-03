@@ -19,7 +19,7 @@ Algunos aspectos adicionales a tener en cuenta:
               <FormattedMessage id='...rate'/>
           </button>
           :
-          <FormattedMessage id='...rated'/>
+          ""
       }
   </td>
   ```
