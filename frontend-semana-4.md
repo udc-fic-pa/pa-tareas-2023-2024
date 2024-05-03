@@ -16,10 +16,10 @@ Algunos aspectos adicionales a tener en cuenta:
           <button className="btn btn-primary" onClick={() => {
               ...
           }}> 
-              <FormattedMessage id="...rate"/>
+              <FormattedMessage id='...rate'/>
           </button>
           :
-          <FormattedMessage id="...rated"/>
+          <FormattedMessage id='...rated'/>
       }
   </td>
   ```
